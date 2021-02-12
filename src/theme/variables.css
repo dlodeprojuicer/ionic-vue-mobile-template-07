@@ -1,0 +1,21 @@
+/* Ionic Variables and Theming. For more info, please see:
+http://ionicframework.com/docs/theming/ */
+@import "./media-queries.scss";
+
+:root {
+  --ion-color-primary: #FFFFFF;
+  --ion-color-primary-tint: #FFFFFF;
+  --ion-color-primary-shade: #FFFFFF;
+
+  --ion-color-light: #ffffff;
+  --ion-color-medium: #e6e5e5;
+  --ion-color-medium-tint: #FFFFFF;
+  --ion-color-medium-shade: #FFFFFF;
+  --ion-color-medium-contrast:#FFFFFF;
+  --ion-background-color: #000000;
+  color: #FFFFFF;
+}
+
+h1 , h2 , h3 , h4 , p , a , ul li , strong , label {
+  color: #777777;
+}
