@@ -2,13 +2,10 @@
 <template>
 	<ion-buttons class="reactions">
 		<ion-button @click="likeFn">
-			<ion-icon :icon="likePost ? heart : heartOutline" :style="likePost ? 'color: red;' : null"></ion-icon>
+			<ion-icon :icon="heart"></ion-icon>
 		</ion-button>
 		<ion-button>
-			<ion-icon :icon="chatbubbleOutline"></ion-icon>
-		</ion-button>
-		<ion-button>
-			<ion-icon :icon="paperPlaneOutline"></ion-icon>
+			<ion-icon :icon="addCircle"></ion-icon>
 		</ion-button>
 	</ion-buttons>
 </template>
@@ -21,9 +18,7 @@ import {
 } from "@ionic/vue";
 
 import { 
-  heartOutline, 
-  paperPlaneOutline, 
-  chatbubbleOutline, 
+  addCircle, 
   heart 
 } from "ionicons/icons";
 
@@ -43,9 +38,7 @@ export default {
 	},
   setup() {
     return {
-      heartOutline,
-      paperPlaneOutline,
-      chatbubbleOutline,
+      addCircle,
       heart
     };
   },
@@ -59,6 +52,7 @@ export default {
 
 <style lang="scss" scoped>
 .reactions {
+  float: right;
   color: #fff;
   ion-button, button {
     margin: 0;

@@ -9,14 +9,14 @@ const routes = [
   },
   {
     path: "/timeline",
-    component: Tabs,
-    children: [
-      {
-        path: "",
-        name: "timeline",
-        component: Timeline,
-      }
-    ],
+    component: Timeline,
+    // children: [
+    //   {
+    //     path: "",
+    //     name: "timeline",
+    //     component: Timeline,
+    //   }
+    // ],
   },
 
   {

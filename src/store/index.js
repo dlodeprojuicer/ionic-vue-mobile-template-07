@@ -34,43 +34,43 @@ const store = createStore({
     stories: [
       {
         name: "Makazol",
-        image: "assets/images/makazoli.png"
+        image: "assets/images/s1.png"
       },
       {
         name: "snoop",
-        image: "assets/images/snoop.png"
+        image: "assets/images/s2.png"
       },
       {
         name: "max",
-        image: "assets/images/max.png"
+        image: "assets/images/s3.png"
       },
       {
         name: "snoop",
-        image: "assets/images/snoop.png"
+        image: "assets/images/s4.png"
       },
       {
         name: "lewis",
-        image: "assets/images/lewis.png"
+        image: "assets/images/s5.png"
       },
       {
         name: "Makazol",
-        image: "assets/images/makazoli.png"
+        image: "assets/images/s1.png"
       },
       {
         name: "snoop",
-        image: "assets/images/snoop.png"
+        image: "assets/images/s2.png"
       },
       {
         name: "max",
-        image: "assets/images/max.png"
+        image: "assets/images/s3.png"
       },
       {
         name: "snoop",
-        image: "assets/images/snoop.png"
+        image: "assets/images/s4.png"
       },
       {
         name: "lewis",
-        image: "assets/images/lewis.png"
+        image: "assets/images/s5.png"
       },
     ]
   },

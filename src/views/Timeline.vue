@@ -3,52 +3,52 @@
   <ion-page>
     <ion-header :translucent="true">
       <ion-toolbar>
-        <img
-          class="logo"
-          src="/assets/images/logo.png"
-          alt="Instagram"
-          width="130"
-        />
+        <ion-buttons slot="start">
+          <ion-button>
+            <ion-icon :icon="menuOutline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+
+        <ion-title>
+          <img
+            src="/assets/images/logo.png"
+            alt="Instagram"
+            width="50"
+          />
+        </ion-title>
 
         <ion-buttons slot="end">
           <ion-button>
-            <ion-icon :icon="addCircleOutline"></ion-icon>
-          </ion-button>
-          <ion-button>
-            <ion-icon :icon="heartOutline"></ion-icon>
-          </ion-button>
-          <ion-button>
-            <ion-icon :icon="paperPlaneOutline"></ion-icon>
+            <ion-icon :icon="cartOutline"></ion-icon>
           </ion-button>
         </ion-buttons>
       </ion-toolbar>
     </ion-header>
 
-    <ion-content :fullscreen="true">
-      <Stories :data="stories" />
-
-      <ion-card v-for="(item, index) in posts" :key="index">
-        <div class="post-author">
-          <ion-icon :icon="personCircleOutline"></ion-icon> 
-          <span>{{ item.name }}</span>
-        </div>
-
+    <ion-content :fullscreen="true" class="ion-padding">
+      <ion-card>
         <img
-          class="card-image"
-          :src="item.image"
-          :alt="item.name"
-          @click="likeDoubleClick()"
+          src="/assets/images/tekkie.png"
+          
+          alt="Drip - Simo mafuxwana - App Concept"
         />
-
-        <Reactions :likePost="likePost" @likeClick="likeClick" />
-
-        <ion-card-header>
-          <ion-card-subtitle class="likes" v-if="item.likes > 0">{{ item.likes }} likes</ion-card-subtitle>
-          <div class="author" v-if="item.description">
-            {{ item.name }} <span class="description">{{ item.description }}</span>
-          </div>
-        </ion-card-header>
       </ion-card>
+      <Reactions :likePost="likePost" @likeClick="likeClick" />
+      <br /><br />
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <span>Popular</span> Footwear
+          </ion-col>
+          <ion-col class="slide-count">
+            1/16
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <Stories :data="stories" />
+      <p>
+        View All
+      </p>
     </ion-content>
   </ion-page>
 </template>
@@ -66,20 +66,16 @@ import {
   IonIcon,
   IonContent,
   IonCard,
-  IonCardHeader,
-  IonCardSubtitle
+  IonTitle,
+  IonGrid,
+  IonRow,
+  IonCol
 } from "@ionic/vue";
 
 import { 
-  personCircleOutline, 
-  search, 
-  filterOutline, 
-  closeOutline, 
-  addCircleOutline, 
-  heartOutline, 
-  paperPlaneOutline, 
-  chatbubbleOutline, 
-  heart 
+  cartOutline,
+  menuOutline,
+  heart
 } from "ionicons/icons";
 
 export default {
@@ -93,21 +89,17 @@ export default {
     IonButtons,
     IonContent,
     IonCard,
-    IonCardHeader,
-    IonCardSubtitle,
     Reactions,
-    Stories
+    Stories,
+    IonTitle,
+    IonGrid,
+    IonRow,
+    IonCol
   },
   setup() {
     return {
-      search,
-      filterOutline,
-      closeOutline,
-      addCircleOutline,
-      heartOutline,
-      paperPlaneOutline,
-      personCircleOutline,
-      chatbubbleOutline,
+      cartOutline,
+      menuOutline,
       heart
     };
   },
@@ -151,15 +143,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-ion-toolbar {
-  --background: #000;
-  color: #ffffff;
-  padding: 0;
+ion-header {
+  box-shadow: none;
 }
 
-.logo {
-  padding: 10px 0 0 10px;
+ion-toolbar {
+  box-shadow: none;
+  --background: #F6CF27;
+  --border-color: #F6CF27;
+  color: #ffffff;
+  padding: 10px 0;
 }
+
 .post-author {
   margin: 10px;
   color: #ffffff;
@@ -178,30 +173,43 @@ ion-toolbar {
   width: 100%;
 }
 
+ion-title {
+    img {
+    filter: grayscale(60%);
+  }
+}
+
 ion-card {
   --background: none;
   margin: 0;
+  box-shadow: none;
+  margin-top: 60px;
 }
 
 ion-card-header {
   padding: 10px;
 }
 
-ion-card-subtitle.likes {
-  text-transform: lowercase;
+ion-col {
   color: #fff;
-  font-size: 15px;
+  span {
+    font-weight: 700;
+  }
+
+  &.slide-count {
+    text-align: right;
+  }
 }
 
-.author {
-  text-transform: lowercase;
+ion-col.slide-count {
+  float: right !important;
+}
+
+p {
   color: #fff;
-  font-size: 15px;
-  font-weight: 600;
-  span {
-    font-weight: initial;
-    text-transform: initial;
-  }
+  text-align: right;
+  font-weight: 700;
+  margin: 15px 0 0 0;
 }
 </style>
   

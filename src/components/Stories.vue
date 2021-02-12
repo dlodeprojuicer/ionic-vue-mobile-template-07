@@ -2,21 +2,18 @@
   <ion-slides>
     <ion-slide v-for="(item, index) in data" :key="index">
       <ion-card>
-        <img :src="item.image" width="100%" />
-        <ion-card-header>
-          <ion-card-title>{{ item.name }} {{ item.lastname }}</ion-card-title>
-        </ion-card-header>
+        <img :src="item.image"  />
       </ion-card>
     </ion-slide>
   </ion-slides>
 </template>
 
 <script>
-import { IonSlides, IonSlide, IonCard, IonCardHeader, IonCardTitle } from "@ionic/vue";
+import { IonSlides, IonSlide, IonCard } from "@ionic/vue";
 
 export default {
   name: "people",
-  components: { IonSlides, IonSlide, IonCard, IonCardHeader, IonCardTitle },
+  components: { IonSlides, IonSlide, IonCard },
   props: {
     data: {
       type: Array,
@@ -30,18 +27,24 @@ export default {
 
 <style lang="scss" scoped>
 ion-slide {
-  width: 85px !important;
+  background: #fff;
+  border-radius: 10px;
+  height: 85px;
+  margin: 8px;
+  width: 80px !important;
+  padding: 0;
 }
 
 ion-card {
+  --background: none;
+  box-shadow: none;
   padding: 0;
   margin: 0;
 }
 
 img {
-  border-radius: 50px;
-  border: 3px rgb(207, 50, 50) solid;
-  height: 70px;
+  border-radius: 10px;
+  // height: 70px;
   width: 70px;
 }
 
