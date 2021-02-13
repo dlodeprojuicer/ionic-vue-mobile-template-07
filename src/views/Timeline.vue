@@ -149,8 +149,8 @@ ion-header {
 
 ion-toolbar {
   box-shadow: none;
-  --background: #F6CF27;
-  --border-color: #F6CF27;
+  --background: var(--brand-primary);
+  --border-color: var(--brand-primary);
   color: #ffffff;
   padding: 10px 0;
 }

@@ -14,6 +14,8 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-medium-contrast:#FFFFFF;
   --ion-background-color: #F6CF27;
   color: #FFFFFF;
+
+  --brand-primary: #F6CF27;
 }
 
 h1 , h2 , h3 , h4 , p , a , ul li , strong , label {

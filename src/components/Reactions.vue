@@ -4,7 +4,7 @@
 		<ion-button @click="likeFn">
 			<ion-icon :icon="heart"></ion-icon>
 		</ion-button>
-		<ion-button>
+		<ion-button @click="openModal()">
 			<ion-icon :icon="addCircle"></ion-icon>
 		</ion-button>
 	</ion-buttons>
@@ -14,8 +14,11 @@
 import {
   IonButtons,
   IonButton,
-  IonIcon
+  IonIcon,
+  modalController,
 } from "@ionic/vue";
+
+import Modal from "./Modal";
 
 import { 
   addCircle, 
@@ -45,12 +48,27 @@ export default {
   methods: {
     likeFn() {
 			this.$emit("likeClick", !this.likePost);
-    }
+    },
+    async openModal(ticket) {
+    const modalInstance = modalController;
+    const modal = await modalInstance
+      .create({
+        component: Modal,
+        componentProps: {
+          context: this,
+          data: ticket,
+          modalInstance,
+        },
+      })
+
+    return modal.present();
+  },
   }
 };
 </script>
 
 <style lang="scss" scoped>
+ion-modal { padding-top: 80%; }
 .reactions {
   float: right;
   color: #fff;
