@@ -2,9 +2,9 @@
 
 ![Netlify Status](https://api.netlify.com/api/v1/badges/fc2b8d51-2242-440c-8f6c-f283e77154c4/deploy-status)
 
-Instagram-inspired [Ionic Vue](https://ionicframework.com/vue) template.
+Template is based on [@TheMadute's](https://twitter.com/TheMadute/status/1357581896868364289) mobile app design concept for Drip Footwear.
 
-[Demo](https://ionic-vue-mobile-template-06.netlify.app)
+[Demo](https://ionic-vue-mobile-template-07.netlify.app)
 
 ## Project setup
 ```
@@ -54,19 +54,19 @@ Using [Capacitor](https://capacitorjs.com/docs/getting-started) for native build
 - [Blog](https://ionicframework.com/blog/announcing-ionic-vue/)
 - [Changelog](https://github.com/ionic-team/ionic-framework/blob/master/CHANGELOG.md)
 
-## Newsletter
-[Subscribe](https://mailchi.mp/b9133e120ccf/sqan8ggx22) to get templates and other ionic-vue updates in your inbox!
+## Subscribe
+- [Newsletter](https://mailchi.mp/b9133e120ccf/sqan8ggx22) - Signup to my Ionic Vue newsletter to get templates and other Ionic Vue updates in your inbox!
+- [YouTube Channel](https://www.youtube.com/channel/UC5jZ6srZuLwt3O3ZtuM1Dsg) - Subscribe to my YouTube channel.
 
-## Template affiliates
+## Affiliates
 I want to keep doing these templates for free for as long as possible. I have joined a few affiliate programmes to help take care of the costs. 
 - [Pixeltrue](https://www.pixeltrue.com/?via=simo) - High quality illustrations that will help you build breath-taking websites.
 - [Getrewardful](https://www.getrewardful.com/?via=simo) - Create your own affiliate program.
 
-Alternatively you can buy me a coffee <a href="https://www.buymeacoffee.com/simomafuxwana" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="120px" height="30px" style="height: 30px !important;width: 120px !important;" ></a>
+Alternatively, you can buy me a coffee <a href="https://www.buymeacoffee.com/simomafuxwana" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="120px" height="30px" style="height: 30px !important;width: 120px !important;" ></a>
 
 ## Credits
-- [Carlos Martinez](https://github.com/cmartinezone/IonicVueExplorePlaces)
-- [Tami Maiwashe](https://www.linkedin.com/in/tami-maiwashe-32824a19a/) - Documentation
+- [@TheMadute's](https://twitter.com/TheMadute/status/1357581896868364289) - Design
 
 ## Contact
 - [@dlodeprojuicer](https://twitter.com/dlodeprojuicer) on Twitter

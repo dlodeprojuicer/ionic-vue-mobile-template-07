@@ -31,7 +31,7 @@
           :width="toggleImage ? '250' : '350'"
         />
       </ion-card>
-      <Reactions @toggleImageFn="toggleImageFn" />
+      <Reactions @toggleImageFn="toggleImageFn" v-if="!toggleImage" />
       <br /><br />
       <ion-grid>
         <ion-row>
