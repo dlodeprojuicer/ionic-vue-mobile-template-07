@@ -17,7 +17,7 @@
         </ion-card>
       </ion-slide>
     </ion-slides>
-    <p>
+    <p @click="viewAll()">
       View All
     </p>
   </div>
@@ -50,7 +50,11 @@ export default {
       default: () => []
     }
   },
-  methods: {},
+  methods: {
+    viewAll() {
+      this.$router.push("/catalogue");
+    }
+  },
 };
 </script>
 

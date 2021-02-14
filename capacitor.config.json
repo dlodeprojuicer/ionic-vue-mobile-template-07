@@ -1,6 +1,6 @@
 {
   "appId": "io.ionic.starter",
-  "appName": "Drip",
+  "appName": "Drip Footwear",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "dist",
@@ -9,9 +9,5 @@
       "launchShowDuration": 0
     }
   },
-  "cordova": {},
-  "server": {
-    "url": "http://10.201.136.38:8100",
-    "cleartext": true
-  }
+  "cordova": {}
 }

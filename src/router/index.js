@@ -5,6 +5,10 @@ const routes = [
   {
     path: "/",
     component: Shop,
+  },
+  {
+    path: "/catalogue",
+    component: () => import("@/views/Catalogue.vue"),
   }
 ];
 
