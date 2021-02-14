@@ -1,39 +1,11 @@
 import { createRouter, createWebHistory } from "@ionic/vue-router";
-import Tabs from "../views/Tabs.vue";
-import Timeline from "../views/Timeline.vue";
+import Shop from "../views/Shop.vue";
 
 const routes = [
   {
     path: "/",
-    redirect: "/timeline",
-  },
-  {
-    path: "/timeline",
-    component: Timeline,
-    // children: [
-    //   {
-    //     path: "",
-    //     name: "timeline",
-    //     component: Timeline,
-    //   }
-    // ],
-  },
-
-  {
-    path: "/user/",
-    component: Tabs,
-    children: [
-      {
-        path: "",
-        redirect: { name: "profile" },
-      },
-      {
-        name: "profile",
-        path: "profile",
-        component: () => import("@/views/Profile.vue")
-      },
-    ],
-  },
+    component: Shop
+  }
 ];
 
 const router = createRouter({
