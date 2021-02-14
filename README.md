@@ -1,8 +1,8 @@
-## Ionic Vue Instagram Template
+## Drip Footwear mobile app concept
 
-![Netlify Status](https://api.netlify.com/api/v1/badges/fc2b8d51-2242-440c-8f6c-f283e77154c4/deploy-status)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ed09513f-5528-42a8-81a9-032114693398/deploy-status)](https://app.netlify.com/sites/ionic-vue-mobile-template-07/deploys)
 
-Template is based on [@TheMadute's](https://twitter.com/TheMadute/status/1357581896868364289) mobile app design concept for Drip Footwear.
+The template is based on [@TheMadute's](https://twitter.com/TheMadute/status/1357581896868364289) mobile app design concept for Drip Footwear.
 
 [Demo](https://ionic-vue-mobile-template-07.netlify.app)
 
@@ -66,7 +66,7 @@ I want to keep doing these templates for free for as long as possible. I have jo
 Alternatively, you can buy me a coffee <a href="https://www.buymeacoffee.com/simomafuxwana" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="120px" height="30px" style="height: 30px !important;width: 120px !important;" ></a>
 
 ## Credits
-- [@TheMadute's](https://twitter.com/TheMadute/status/1357581896868364289) - Design
+- [@TheMadute](https://twitter.com/TheMadute/status/1357581896868364289) - Design
 
 ## Contact
 - [@dlodeprojuicer](https://twitter.com/dlodeprojuicer) on Twitter
