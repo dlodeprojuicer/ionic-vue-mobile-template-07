@@ -32,21 +32,8 @@
         />
       </ion-card>
       <Reactions @toggleImageFn="toggleImageFn" v-if="!toggleImage" />
-      <br /><br />
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <span>Popular</span> Footwear
-          </ion-col>
-          <ion-col class="slide-count">
-            1/16
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+      <h1 class="product-name">Lidwidz Yellow</h1>
       <Popular :data="popular" />
-      <p>
-        View All
-      </p>
     </ion-content>
   </ion-page>
 </template>
@@ -64,10 +51,7 @@ import {
   IonIcon,
   IonContent,
   IonCard,
-  IonTitle,
-  IonGrid,
-  IonRow,
-  IonCol
+  IonTitle
 } from "@ionic/vue";
 
 import { 
@@ -77,7 +61,7 @@ import {
 } from "ionicons/icons";
 
 export default {
-  name: "Explorer",
+  name: "Shop",
   components: {
     IonPage,
     IonHeader,
@@ -89,10 +73,7 @@ export default {
     IonCard,
     Reactions,
     Popular,
-    IonTitle,
-    IonGrid,
-    IonRow,
-    IonCol
+    IonTitle
   },
   data() {
     return {
@@ -120,6 +101,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+//ion-content {
+  // width: fit-content;
+  // height: 100%;
+  // block-size: fit-content;
+//}
+
 ion-header {
   box-shadow: none;
 }
@@ -129,11 +116,6 @@ ion-toolbar {
   --background: var(--brand-primary);
   --border-color: var(--brand-primary);
   color: #ffffff;
-  padding: 10px 0;
-}
-
-.card-image {
-  width: 100%;
 }
 
 ion-title {
@@ -144,34 +126,17 @@ ion-title {
 
 ion-card {
   --background: none;
-  margin: 0;
+  margin: 0 20%;
   box-shadow: none;
-  margin-top: 60px;
+}
+
+.product-name {
+  color: #fff;
+  text-align: center;
 }
 
 ion-card-header {
   padding: 10px;
 }
 
-ion-col {
-  color: #fff;
-  span {
-    font-weight: 700;
-  }
-
-  &.slide-count {
-    text-align: right;
-  }
-}
-
-ion-col.slide-count {
-  float: right !important;
-}
-
-p {
-  color: #fff;
-  text-align: right;
-  font-weight: 700;
-  margin: 15px 0 0 0;
-}
 </style>

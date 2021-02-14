@@ -1,6 +1,6 @@
 {
   "appId": "io.ionic.starter",
-  "appName": "exploreplaces",
+  "appName": "Drip",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "dist",
@@ -9,5 +9,9 @@
       "launchShowDuration": 0
     }
   },
-  "cordova": {}
+  "cordova": {},
+  "server": {
+    "url": "http://10.201.136.38:8100",
+    "cleartext": true
+  }
 }

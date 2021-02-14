@@ -1,5 +1,5 @@
 <template>
-	<ion-buttons class="reactions">
+	<ion-buttons>
 		<ion-button @click="likeFn">
 			<ion-icon :icon="heart"></ion-icon>
 		</ion-button>
@@ -68,13 +68,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.reactions {
-  float: right;
+ion-buttons {
   color: #fff;
-  ion-button, button {
-    margin: 0;
-    padding: 0;
-  }
+  width: 25%;
+  margin: 0 auto;
 }
 </style>
   
