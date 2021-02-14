@@ -116,13 +116,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-ion-modal { 
-  // --background: green;
-  --height: 386px;
-  margin-top: 430px;
-  border-radius: 50px 50px 0 0;
-}
-
 ion-content {
   --background: #fff;
 }

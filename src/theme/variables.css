@@ -21,3 +21,9 @@ http://ionicframework.com/docs/theming/ */
 h1 , h2 , h3 , h4 , p , a , ul li , strong , label {
   color: #777777;
 }
+
+ion-modal { 
+  --height: 386px;
+  margin-top: 430px;
+  border-radius: 50px 50px 0 0;
+}

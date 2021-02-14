@@ -28,6 +28,7 @@
       <ion-card>
         <img :src="`assets/images/${toggleImage ? 's6' : 'tekkie'}.png`"
           alt="Drip - Simo Mafuxwana - App Concept"
+          :width="toggleImage ? '250' : '350'"
         />
       </ion-card>
       <Reactions @toggleImageFn="toggleImageFn" />
