@@ -1,4 +1,3 @@
-
 <template>
 	<ion-buttons class="reactions">
 		<ion-button @click="likeFn">
@@ -15,7 +14,7 @@ import {
   IonButtons,
   IonButton,
   IonIcon,
-  modalController,
+  modalController
 } from "@ionic/vue";
 
 import Modal from "./Modal";
@@ -49,26 +48,26 @@ export default {
     likeFn() {
 			this.$emit("likeClick", !this.likePost);
     },
-    async openModal(ticket) {
-    const modalInstance = modalController;
-    const modal = await modalInstance
-      .create({
-        component: Modal,
-        componentProps: {
-          context: this,
-          data: ticket,
-          modalInstance,
-        },
-      })
+    async openModal() {
+      this.$emit("toggleImageFn", true);
+      const modalInstance = modalController;
+      const modal = await modalInstance
+        .create({
+          component: Modal,
+          cssClass: "custom-modal-class",
+          componentProps: {
+            context: this,
+            modalInstance,
+          },
+        })
 
-    return modal.present();
-  },
+      return modal.present();
+    }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-ion-modal { padding-top: 80%; }
 .reactions {
   float: right;
   color: #fff;

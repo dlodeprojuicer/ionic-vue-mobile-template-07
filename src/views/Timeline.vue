@@ -1,4 +1,3 @@
-
 <template>
   <ion-page>
     <ion-header :translucent="true">
@@ -27,13 +26,11 @@
 
     <ion-content :fullscreen="true" class="ion-padding">
       <ion-card>
-        <img
-          src="/assets/images/tekkie.png"
-          
-          alt="Drip - Simo mafuxwana - App Concept"
+        <img :src="`assets/images/${toggleImage ? 's6' : 'tekkie'}.png`"
+          alt="Drip - Simo Mafuxwana - App Concept"
         />
       </ion-card>
-      <Reactions :likePost="likePost" @likeClick="likeClick" />
+      <Reactions @toggleImageFn="toggleImageFn" />
       <br /><br />
       <ion-grid>
         <ion-row>
@@ -45,7 +42,7 @@
           </ion-col>
         </ion-row>
       </ion-grid>
-      <Stories :data="stories" />
+      <Popular :data="popular" />
       <p>
         View All
       </p>
@@ -55,7 +52,7 @@
 
 <script>
 import Reactions from "./../components/Reactions";
-import Stories from "./../components/Stories";
+import Popular from "./../components/Popular";
 
 import {
   IonPage,
@@ -90,11 +87,16 @@ export default {
     IonContent,
     IonCard,
     Reactions,
-    Stories,
+    Popular,
     IonTitle,
     IonGrid,
     IonRow,
     IonCol
+  },
+  data() {
+    return {
+      toggleImage: false
+    }
   },
   setup() {
     return {
@@ -103,40 +105,14 @@ export default {
       heart
     };
   },
-  data() {
-    return {
-      likePost: false,
-      click: undefined,
-      clickType: 'Click or Doubleclick ME'
-    }
-  },
   computed: {
-    posts() {
-      return this.$store.getters.posts;
-    },
-    stories() {
-      return this.$store.getters.stories;
+    popular() {
+      return this.$store.getters.popular;
     }
   },
   methods: {
-    likeDoubleClick() {
-      return new Promise ((resolve) => {
-        if (this.click) {
-          clearTimeout(this.click)
-          resolve('Detected DoubleClick');
-          this.likePost = !this.likePost;
-          this.click = undefined;
-          return;
-        }
-
-        this.click = setTimeout(() => {
-         this.click = undefined;
-         resolve('Detected SingleClick')
-        }, 400)
-      })
-    },
-    likeClick() {
-      this.likePost = !this.likePost;
+    toggleImageFn(toggle) {
+      this.toggleImage = toggle;
     }
   }
 };
@@ -155,20 +131,6 @@ ion-toolbar {
   padding: 10px 0;
 }
 
-.post-author {
-  margin: 10px;
-  color: #ffffff;
-  font-weight: 500;
-  text-transform: lowercase;
-  ion-icon {
-    margin-bottom: -10px;
-    font-size: 30px;
-  }
-  span {
-    font-size: 16px;
-    margin: 0 0 0 5px;
-  }
-}
 .card-image {
   width: 100%;
 }
@@ -212,4 +174,3 @@ p {
   margin: 15px 0 0 0;
 }
 </style>
-  
